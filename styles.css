@@ -1,5 +1,5 @@
 :root {
-    --background: #ffffff;
+    --background: #faf9f5;
     --primary:#3D3D3D;
     --secondary:#0D4B6E;
     --accent:#BB1F25;
@@ -13,6 +13,10 @@
   --accent: #E24C51;
   --theme: "DARK MODE"
 }
+
+
+/* FONTS
+font-family: 'Playfair Display', serif; */
 
 /* Box sizing rules */
 *,
@@ -92,9 +96,31 @@ select {
 
 body {
     background-color: var(--background);
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+  height: 10vh;
+  width: 100%;
+  background: var(--primary);
+}
+.nav-link {
+  text-decoration: none;
+  color: var(--accent);
+}
+.nav-link:hover{
+  color: var(--secondary);
 }
 .hell {
     color: var(--primary);
+    margin-top: 6rem;
 }
 
 
