@@ -1,0 +1,167 @@
+:root {
+    --background: #ffffff;
+    --primary:#3D3D3D;
+    --secondary:#0D4B6E;
+    --accent:#BB1F25;
+    --theme: "LIGHT MODE"
+}
+
+[data-theme="dark"] {
+  --background:#3d3d3d;
+  --primary: #87b6a4;
+  --secondary: #6b6c94;
+  --accent: #E24C51;
+  --theme: "DARK MODE"
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+body {
+    background-color: var(--background);
+}
+.hell {
+    color: var(--primary);
+}
+
+
+
+
+/* dark theme button  */
+.dark__mode__container {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: var(--background);
+    opacity: .9;
+    margin: 5px;
+    border-radius: 5px;
+  }
+  .dark__mode__container em {
+    margin-left: 10px;
+    font-size: .75rem;
+  }
+  .dark__mode__container em:before{
+    content: var(--theme);
+  }
+  .dark-switch {
+    display: inline-block;
+    height: 17px;
+    position: relative;
+    width: 30px;
+  }
+  
+  .dark-switch input {
+    display:none;
+  }
+  
+  .slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    background-color: #fff;
+    bottom: 2px;
+    content: "";
+    height: 13px;
+    left: 1px;
+    position: absolute;
+    transition: .4s;
+    width: 13px;
+  }
+  
+  input:checked + .slider {
+    background-color: #87b6a4;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
