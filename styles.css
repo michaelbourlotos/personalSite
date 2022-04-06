@@ -1,24 +1,23 @@
 :root {
+    --mainFont: 'Poppins', sans-serif;
+    --serif: 'Playfair Display', serif;
     --background: #faf9f5;
     --primary:#3D3D3D;
     --secondary:#0D4B6E;
-    --accent:#BB1F25;
+    --accent:#E24C51;
     --theme: "LIGHT MODE"
 }
 
 [data-theme="dark"] {
   --background:#3d3d3d;
   --primary: #87b6a4;
-  --secondary: #6b6c94;
+  --secondary: #faf9f5;
   --accent: #E24C51;
   --theme: "DARK MODE"
 }
 
 
-/* FONTS
-font-family: 'Playfair Display', serif; */
 
-/* Box sizing rules */
 *,
 *::before,
 *::after {
@@ -96,7 +95,7 @@ select {
 
 body {
     background-color: var(--background);
-    font-family: 'Playfair Display', serif;
+    font-family: var(--mainFont);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -104,7 +103,7 @@ body {
 .navbar{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   gap: 2rem;
   height: 10vh;
@@ -113,10 +112,12 @@ body {
 }
 .nav-link {
   text-decoration: none;
-  color: var(--accent);
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--background);
 }
 .nav-link:hover{
-  color: var(--secondary);
+  color: var(--accent);
 }
 .hell {
     color: var(--primary);
@@ -191,3 +192,65 @@ body {
   .slider.round:before {
     border-radius: 50%;
   }
+
+
+
+
+  /* portfolio */
+
+.portfolio__header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.portfolio__header__text{
+  font-size: 2rem;
+  font-family: var(--mainFont);
+  color: var(--primary);
+}
+
+.portfolio__items{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  flex-wrap: wrap ;
+}
+.portfolio__item{
+  padding: 1.5rem .5rem 1.5rem .5rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+.portfolio__item__text hr {
+  border: 1px solid var(--secondary);
+}
+.portfolio__item__text hr:first-child{
+  border: 1px solid var(--secondary);
+}
+.portfolio__item__text hr:last-child{
+  border: 3px solid var(--secondary);
+}
+.portfolio__item__text h2{
+  font-weight: 500;
+  color: var(--primary);
+  font-family: 'Poppins', sans-serif;
+}
+.portfolio__item__text a {
+  text-decoration: none;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--accent);
+  font-size: 1.25rem;
+}
+
+.portfolio__image {
+  height: 250px;
+  width: 350px;
+  object-fit: contain;
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+.portfolio__image img{
+  flex: 1;
+  width: 100%;
+  height: auto;
+}
