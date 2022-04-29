@@ -5,18 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Bourlotos</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,500;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <nav class="navbar">
-    <a href="#" class="nav-link">Home</a>
-    <a href="#" class="nav-link">Resume</a>
-    <a href="#" class="nav-link">Portfolio</a>
-    <a href="#" class="nav-link">Contact</a>
-  </nav>
+
   <body>
+    <nav class="navbar">
+      <a href="#" class="nav-link">Home</a>
+      <a href="#portfolio" class="nav-link portfolioSection">Projects</a>
+      <a href="#resume" class="nav-link resumeSection">Resume</a>
+      <a href="#about" class="nav-link aboutSection">Info</a>
+    </nav>
     <div class="dark__mode__container">
       <label class="dark-switch" for="checkbox">
         <input type="checkbox" id="checkbox" />
@@ -24,24 +28,19 @@
       </label>
       <em></em>
     </div>
-    <div class="intro">
-      <h1 class="intro--heading">Michael Bourlotos </h1>
+    <section id="home" class="intro">
+      <h1 class="intro--heading">Michael Bourlotos</h1>
       <h2 class="intro--heading2">Developer</h2>
-    </div>
-    
-    
-    <section class="portfolio">
+    </section>
+    <section class="portfolio" id="portfolio">
       <div class="portfolio__header">
         <h2 class="portfolio__header__text">PROJECTS</h2>
       </div>
       <div class="portfolio__items">
         <div class="portfolio__item">
           <div class="portfolio__item__text">
-            <hr />
-            <a href="" class="portfolio__item__text__heading">INTERNSHIP APP</a>
-            
-            <p class="portfolio__item__text__description">An applications for students to find and apply for internships. Built with ASP.NET using MVC.</p>
-            <hr />
+            <h2>Internship App</h2>
+            <p>asp.net/mvc/sql</p>
           </div>
           <div class="portfolio__image">
             <img src="content/images/internship.png" alt="" class="" />
@@ -49,10 +48,8 @@
         </div>
         <div class="portfolio__item">
           <div class="portfolio__item__text">
-            <hr />
-            <h2>PHOTO A DAY</h2>
-            <a href="">photoaday.com</a>
-            <hr />
+            <h2>Photo A Day Site</h2>
+            <p>php/mysql</p>
           </div>
           <div class="portfolio__image">
             <img src="content/images/photoSite.png" alt="" class="" />
@@ -60,24 +57,142 @@
         </div>
         <div class="portfolio__item">
           <div class="portfolio__item__text">
-            <hr />
-            <h2>E-BANANA BIKE</h2>
-            <a href="">banana.com</a>
-            <hr />
+            <h2>Electric Banana</h2>
+            <p>banana.com</p>
           </div>
           <div class="portfolio__image">
-            <img src="images/company-photo3.jpeg" alt="" class="" />
+            <img src="content/images/banana.jpeg" alt="" class="" />
           </div>
         </div>
       </div>
     </section>
-
-
-
-
-
-
-
+    <section id="resume" class="resume"> 
+      <div class="resume__header">
+        <h2 class="resume__header__text">RESUME</h2>
+      </div>
+      <div class="resume__container">
+        <div class="experience">
+          <h3 class="experience--heading">EXPERIENCE</h3>
+          <div class="job__container">
+            <div class="job">
+              <p>
+                <strong>Office of the Attorney General</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Service Desk Technician - Contractor</em>
+              </p>
+              <p>
+                January 2022 - Present
+              </p>
+            </div>
+            <div class="job">
+              <p>
+                <strong>Thistle and Rose</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Gardener/Landscaper</em>
+              </p>
+              <p>
+                2020 - 2022
+              </p>
+            </div>
+            <div class="job">
+              <p>
+                <strong>821 Cafe</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Bar Manager</em>
+              </p>
+              <p>
+                2012 - 2020
+              </p>
+            </div>
+            <div class="job">
+              <p>
+                <strong>Strange Matter</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Bartender</em>
+              </p>
+              <p>
+                2015 - 2019
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="education">
+          <h3 class="education--heading">EDUCATION</h3>
+          <div class="school__container">
+            <div class="school">
+              <p>
+                <strong>Reynolds Community College</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Information Systems AAS</em><br/>
+                <em>Computer Programmer CSC</em>
+              </p>
+              <p>
+                2019 - 2022
+              </p>
+            </div>
+            <div class="school">
+              <p>
+                <strong>Virgina Commonwealth University</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>Visual Arts</em>
+              </p>
+              <p>
+                2006 - 2007
+              </p>
+            </div>
+            <div class="school">
+              <p>
+                <strong>Thomas Nelson Community College</strong>, Richmond, VA
+              </p>
+              <p>
+                <em>General Education</em>
+              </p>
+              <p>
+                2003 - 2005
+              </p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <section id="about" class="about">
+      <div class="about__header">
+        <h2 class="about__header__text">
+          INFO
+        </h2>
+      </div>
+      <div class="about__container">
+        <div class="about__container__image">
+          <img src="content/images/me.jpg" alt="" class="" />
+        </div>
+        <div class="about__container__text">
+          <p>
+            I am a full stack developer with a passion for creating beautiful,
+            intuitive, and user-friendly applications. I have a background in
+            both design and development, and I am always looking to learn new
+            skills and technologies.
+          </p>
+          <p>
+            I am currently looking for my first developer role in the Richmond, VA area.
+          </p>
+        </div>
+        <div class="about__container__contact">
+          <div class="contact__button">
+              <a href="mailto:michaelbourlotos@gmail.com">Contact</a>
+          </div>     
+        
+    </section>
+    <section id="footer" class="footer">
+      <div class="footer">
+        <p>feet</p>
+      </div>
+    </section>
     <script src="js/darkMode.js"></script>
+    <script src="js/scrollActive.js"></script>
   </body>
 </html>

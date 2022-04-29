@@ -5,7 +5,7 @@
     --primary:#3D3D3D;
     --secondary:#0D4B6E;
     --accent:#E24C51;
-    --theme: "LIGHT MODE"
+    --theme: "LIGHT MODE";
 }
 
 [data-theme="dark"] {
@@ -13,7 +13,7 @@
   --primary: #87b6a4;
   --secondary: #faf9f5;
   --accent: #E24C51;
-  --theme: "DARK MODE"
+  --theme: "DARK MODE";
 }
 
 
@@ -45,6 +45,9 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
+html{
+  scroll-behavior: smooth;
+}
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -99,7 +102,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 300vh;
 }
 .navbar{
   display: flex;
@@ -117,9 +119,24 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   color: var(--background);
+  background-image: linear-gradient(
+    transparent 0%,
+    transparent 90%,
+    var(--accent) 90%,
+    var(--accent) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms ease-out, color 300ms ease-out;
+}
+.active{
+  color: var(--accent);
 }
 .nav-link:hover{
   color: var(--accent);
+  background-size: 100% 100%;
+  background-position-x: left;
 }
 .intro {
   display: flex;
@@ -127,7 +144,7 @@ body {
   justify-content: space-between;
   width:90%;
   height: 80vh;
-  margin: 7rem auto 6rem auto;
+  margin: 7rem auto 0 auto;
   background-image: url(content/images/woodsBackground.jpg);
   background-size: cover;
   background-position: center top;
@@ -230,7 +247,9 @@ body {
 
 
   /* portfolio */
-
+.portfolio{
+  padding-top: 6rem;
+}
 .portfolio__header {
   display: flex;
   justify-content: center;
@@ -238,9 +257,9 @@ body {
   margin-bottom: 7.5rem;
 }
 .portfolio__header__text{
-  font-size: clamp(1.25rem, 5vw, 4rem); 
+  font-size: clamp(1.75rem, 5vw, 4rem); 
   font-family: var(--mainFont);
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .portfolio__items{
@@ -249,37 +268,28 @@ body {
   justify-content: center;
   flex-wrap: wrap ;
   gap:2rem;
-  
-  
 }
 .portfolio__item{
   display: flex;
   flex-direction: column;
   text-align: center;
   line-height: 1.5rem;
-
-  
+  padding-top: 1.5rem;
+  box-shadow: 0px 0px 5px var(--primary);
+  border-radius: 6px;
+}
+.portfolio__item:hover{
+  cursor: pointer;
 }
 .portfolio__item__text {
   max-width: 350px;
-}
-.portfolio__item__text hr {
-  border: 1px solid var(--secondary);
-  border-radius: 5px;
-  
-}
-.portfolio__item__text hr:first-child{
-  border: 1px solid var(--secondary);
-}
-.portfolio__item__text hr:last-child{
-  border: 3px solid var(--secondary);
 }
 .portfolio__item__text h2{
   font-weight: 500;
   color: var(--primary);
   font-family: var(--mainFont );
 }
-.portfolio__item__text a {
+.portfolio__item__text p {
   text-decoration: none;
   font-family: var(--serif);
   font-style: italic;
@@ -293,16 +303,125 @@ body {
   object-fit: contain;
   overflow: hidden;
   margin-top: 1.5rem;
-  border-radius: 5px;
-  box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+  /* border-radius: 5px; */
+  
 }
 .portfolio__image img{
   flex: 1;
   width: 100%;
   height: auto;
 }
+/* resume section */
+.resume {
+  padding-top: 6rem;
+  margin: 0 1rem 0 1rem;
+}
+.resume__header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 7.5rem;
+}
+.resume__header__text{
+  font-size: clamp(1.75rem, 5vw, 4rem); 
+  font-family: var(--mainFont);
+  color: var(--primary);
+}
 
 
+
+.resume__container{
+  display: flex;
+  flex-direction: row;  
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 4rem;
+}
+
+/* experience / education */
+.experience {
+  font-family: var(--mainFont);
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 1rem;
+  flex: 1 1 0px
+}
+.experience--heading{
+  font-size: clamp(1rem, 2vw, 2rem); 
+  color: var(--accent);
+  text-align: center;
+}
+.job, .school {
+  margin-top: 1rem;
+}
+.education {
+  font-family: var(--mainFont);
+  color: var(--primary);
+  padding: 1rem;
+  flex: 1 1 0px;
+}
+.education--heading{
+  font-size: clamp(1rem, 2vw, 2rem); 
+  color: var(--accent);
+  text-align: center;
+}
+
+
+.school{
+  display: flex;
+  flex-direction: column;
+}
+
+/* about section */
+.about{
+  padding-top: 6rem;
+  margin: 0 1rem 0 1rem;
+
+  
+}
+.about__header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 7.5rem;
+}
+.about__header__text{
+  font-size: clamp(1.75rem, 5vw, 4rem); 
+  font-family: var(--mainFont);
+  color: var(--accent);
+}
+.about__container{
+  width:50%;
+  margin: auto;
+  text-align: center;
+  color: var(--primary);
+}
+.about__container__contact{
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0 4rem 0;
+}
+.about__container__contact a{
+  text-decoration: none;
+  color: var(--accent);
+  
+}
+.contact__button{
+  text-decoration: none;
+  color: var(--accent);
+  padding: .5rem;
+  border: 2px solid var(--primary);
+  border-radius: 6px;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+ .footer{
+  width: 100%;
+  height: clamp(50px,75px,10vh);
+  background-color: var(--primary);
+} 
 /* media queries */
 /* tablets - phones */
 @media (max-width: 768px) {
@@ -319,3 +438,4 @@ body {
 }
 
 }
+
