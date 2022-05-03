@@ -1,12 +1,11 @@
 const sections = document.querySelectorAll("section");
 const navLi = document.querySelectorAll(".navbar a");
-console.log(navLi);
 window.onscroll = () => {
     var current = "";
   
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (scrollY >= sectionTop - 60) {
+      if (scrollY >= sectionTop - 120) {
         current = section.getAttribute("id"); }
     });
   
