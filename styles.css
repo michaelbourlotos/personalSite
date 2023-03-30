@@ -138,11 +138,6 @@ body {
 .active{
   color: var(--accent);
 }
-.nav-link:hover{
-  color: var(--accent);
-  background-size: 100% 100%;
-  background-position-x: left;
-}
 .intro {
   display: flex;
   flex-direction: column;
@@ -253,7 +248,7 @@ body {
   padding: 1rem;
 }
 .portfolio__item__overlay P{
-  font-weight: 600;
+  font-weight: 400;
 }
 .overlay__button{
   text-decoration: none;
@@ -453,6 +448,10 @@ body {
   gap: 1rem;
 }
 
+.copyright {
+  text-align: center;
+}
+
 /* media queries */
 /* tablets - phones */
 @media (max-width: 768px) {
@@ -470,3 +469,28 @@ body {
 
 }
 
+
+/* desktop spacing */
+@media (min-width: 768px) {
+  .portfolio{
+    margin-top: 8rem;
+  }
+
+  .resume{
+    margin-top: 8rem;
+  }
+
+  .about{
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+}
+
+/* fixes hover state sitcking on mobile */
+@media (hover: hover) {
+  .nav-link:hover{
+    color: var(--accent);
+    background-size: 100% 100%;
+    background-position-x: left;
+  }
+}

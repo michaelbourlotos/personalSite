@@ -5,7 +5,7 @@ window.onscroll = () => {
   
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
-      if (scrollY >= sectionTop - 120) {
+      if (scrollY >= sectionTop - 400) {
         current = section.getAttribute("id"); }
     });
   
